@@ -2,13 +2,17 @@
 
 COMPSCI 351课程设计作品, a php-MySQL program.
 
-Stederlee [fsZhuangB](https://github.com/fsZhuangB) Andy
+Author:
+
+* Stederlee
+* [fsZhuangB](https://github.com/fsZhuangB) 
+* Andy
 
 
 
 ## Introduction
 
-After studying in University for about two years, we find that the most asked question is:  Which classroom should I go for the next coming class? Usually, we will open curriculum schedule, find the course and its classroom. It takes time and we need to keeping zooming in and out to see it clear. 
+After studying in University for about two years, we find that the most asked question is:  **Which classroom should I go for the next coming class?** Usually, we will open the curriculum schedule, find the course and its classroom. It takes time and we need to keeping zooming in and out to see it clear. 
 
 Also, we find that a Todo-List is very helpful in our University life, so we won't forget to submit our homework again.
 
