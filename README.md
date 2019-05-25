@@ -41,9 +41,24 @@ In short, ClassHelper is providing you:
   - 根据课本的要求完成数据库设计的步骤，**完成文书工作**
   - 建立对应的数据库
 
-
-
 ## 功能详细介绍
+
+### 用户登录
+
+用户登录逻辑设计如下
+
+![](login.png)
+
+（因此我们需要在`index.php`中完成Cookie有效判断和个人面板。在`login.php`中完成登录鉴权和Cookie的操作。）
+
+#### sid 
+
+我们在Cookie中储存一个sid字段。这个字段通过登录API生成，并于用户身份一一对应，并有一定的有效期。
+
+在用户面板呈现时，我们通过查询sid获得对应的用户uid，然后进行对应的数据库查询。
+
+相当于sid作为其它API的一个参数，来确定我们要操作的用户以及用户登录的有效性。
+
 
 *Please move on with the detailed design of the functions.*
 
