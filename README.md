@@ -4,7 +4,14 @@ COMPSCI 351课程设计作品, a php-MySQL program.
 
 Stederlee [fsZhuangB](https://github.com/fsZhuangB) Andy
 
+## DEMO
 
+A demo page:  http://demo.redets.ga/web/ , login with the following info:
+* username = stephen
+
+* passwd = 123456
+
+**Since the logout function has not yet been implemented, once you log in successfully, the logon status will remain until the Cookie expires.**
 
 ## Introduction
 
