@@ -11,7 +11,7 @@ A demo page:  http://demo.redets.ga/web/ , login with the following info:
 
 * passwd = 123456
 
-**Since the logout function has not yet been implemented, once you log in successfully, the logon status will remain until the Cookie expires.**
+or simply create your own account.
 
 ## Introduction
 
