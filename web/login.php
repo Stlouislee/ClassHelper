@@ -24,6 +24,8 @@
 				<form class="login100-form validate-form" action="doLogin.php" method="post">
 					<span class="login100-form-title p-b-49">登录</span>
 
+          <div align="center" style="color:red"><?php echo $_GET["warnMsg"]; ?></div>
+
 					<div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
 						<span class="label-input100">用户名</span>
 						<input class="input100" type="text" name="id" placeholder="请输入用户名" autocomplete="off">
@@ -48,7 +50,7 @@
 					</div>
 
 					<div class="flex-col-c p-t-25">
-						<a href="javascript:" class="txt2">立即注册</a>
+						<a href="signup.php" class="txt2">立即注册</a>
 					</div>
 				</form>
 			</div>

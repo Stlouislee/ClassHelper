@@ -27,9 +27,9 @@ $result = $conn->query($checkSessionSQL);
 
 if ($result->num_rows > 0){ //Vaild Session
   //Begin the panel codes here, or redirect the page
-  echo "login success";
+  header("Location:/web/panel.php?sid=$sid");
 }else{
-  header("Location:/web/login.html");
+  header("Location:/web/login.php");
   exit;
 }
 ?>

@@ -40,7 +40,6 @@ if ($result->num_rows > 0){
 
 
 } else {
-  echo "Fail to login";
-  print_r($result);
+  header("Location:/web/login.php?warnMsg=Authentication%20Failed");
 }
 ?>
