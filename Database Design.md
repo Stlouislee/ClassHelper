@@ -107,6 +107,15 @@ CREATE TABLE `ClassHelper`.`session`
 ENGINE = InnoDB;
 ```
 
+### FORGOT
+
+```sql
+CREATE TABLE `ClassHelper`.`forgot` ( 
+  `uid` INT NOT NULL , 
+  `resetkey` VARCHAR(255) NOT NULL 
+  ) 
+ENGINE = InnoDB;
+```
 
 
 ### BOOK
@@ -139,3 +148,6 @@ ALTER TABLE `course` ADD FOREIGN KEY (`uid`) REFERENCES `user`(`uid`) ON DELETE 
 ALTER TABLE `session` ADD FOREIGN KEY (`uid`) REFERENCES `user`(`uid`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 ```
 
+```sql
+ALTER TABLE `forgot` ADD FOREIGN KEY (`uid`) REFERENCES `user`(`uid`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+```
