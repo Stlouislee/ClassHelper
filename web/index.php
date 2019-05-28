@@ -9,9 +9,7 @@ if(!$_COOKIE["session"]){
 
 $sid = $_COOKIE["session"];
 
-$servername = "cloud.steder.cc";
-$username = "ClassHelper";
-$password = "****";
+require("config.php");
  
 // 创建连接
 $conn = new mysqli($servername, $username, $password);

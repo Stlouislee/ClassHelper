@@ -4,11 +4,7 @@ $newEmail = $_POST["email"];
 $newPasswd = $_POST["pwd"];
 
 //Database Info:
-
-$servername = "cloud.steder.cc";
-$username = "ClassHelper";
-$password = "****";
- 
+require("config.php");
 // 创建连接
 $conn = new mysqli($servername, $username, $password);
 
@@ -38,7 +34,7 @@ if ($result->num_rows > 0){ //User name already exist
 $sql = "INSERT INTO ClassHelper.user VALUES (NULL,\"$newUserName\",\"$newPasswd\",\"$newEmail\")";
 echo $sql;
 $conn->query($sql);
-header("Location:/web/login.php?warnMsg=Registered Successfully");
+header("Location:/web/login.php?prompt=Registered Successfully");
 
 
 //header("Location:/web/signup.php?warnMsg=$sql");

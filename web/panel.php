@@ -3,9 +3,7 @@
 $sid = $_GET["sid"];
 $uid = -1;
 
-$servername = "cloud.steder.cc";
-$username = "ClassHelper";
-$password = "****";
+require("config.php");
  
 // 创建连接
 $conn = new mysqli($servername, $username, $password);
@@ -18,8 +16,7 @@ if ($conn->connect_error) {
 $sql = "SELECT user.uid, user.uname, session.uid, session.sid FROM ClassHelper.session JOIN ClassHelper.user ON session.uid = user.uid WHERE sid = \"$sid\"";
 //echo $sql;
 $result = $conn->query($sql);
-if($result->row_num =0){
-  echo $result->row_num;
+if($result->num_rows ==0){
   echo "Session Error";
 }else{
   $row = $result->fetch_assoc();
