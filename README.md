@@ -4,6 +4,16 @@ COMPSCI 351课程设计作品, a php-MySQL program.
 
 Stederlee [fsZhuangB](https://github.com/fsZhuangB) Andy
 
+![](screenshot1559058080405.png)
+
+## TODO
+1. todo的删除接口
+2. 课程的添加、删除
+3. 每日一句
+4. 个人信息修改
+5. 细节修复
+
+
 ## DEMO
 
 A demo page:  http://demo.redets.ga/web/ , login with the following info:
