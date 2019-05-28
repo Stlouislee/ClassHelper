@@ -132,7 +132,19 @@ CREATE TABLE `ClassHelper`.`book`
 ENGINE = InnoDB;
 ```
 
+### TODO
 
+```sql
+CREATE TABLE `ClassHelper`.`todo` ( 
+    `tid` INT NOT NULL AUTO_INCREMENT , 
+    `task` VARCHAR(255) NOT NULL , 
+    `ddl` DATETIME NOT NULL , 
+    `done` INT NOT NULL , 
+    'uid' INT NOT NULL,
+    PRIMARY KEY (`tid`)
+) 
+ENGINE = InnoDB;
+```
 
 ## Adding Foreign Constraints
 
