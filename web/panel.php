@@ -45,20 +45,19 @@ background-size:cover
           <span class="card-title"><?php echo "Welcome, ".$userName;?></span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p>Spring breeze miles, less than to meet you; Clear blue skies, not as good as you are in my heart. </p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="class/allClass.php">Setting</a>
         </div>
       </div>
     </div>
 
-    <?php global $uid;include "/home/coding/workspace/web/class/current.php";?>
+    <?php global $uid;include "class/current.php";?>
 
-    <?php global $uid;include "/home/coding/workspace/web/class/nextclass.php";?>
+    <?php global $uid;include "class/nextclass.php";?>
 
-    <?php global $uid;include "/home/coding/workspace/web/todo/mainTodo.php";?>
+    <?php global $uid;include "todo/mainTodo.php";?>
 
 
   </div>

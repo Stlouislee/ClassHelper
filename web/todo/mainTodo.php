@@ -24,8 +24,8 @@ EOT;
 $sql = "SELECT * FROM ClassHelper.todo WHERE done = 0 and uid = \"$uid\"";
 $result = $conn->query($sql);
 $numResult = $result->num_rows;
-if ($numResult >4){
-  $numResult = 4;
+if ($numResult >2){
+  $numResult = 2;
 }
 for($i=0;$i<$numResult;$i++){
   $row = $result->fetch_assoc();
@@ -38,7 +38,7 @@ $tableContent = $tableContent."</tbody> </table>";
 
 
     <div class="col s12 m6">
-      <div class="card white medium">
+      <div class="card white small">
                   
         <div class="card-content black-text">
           <span class="card-title">Todo</span>

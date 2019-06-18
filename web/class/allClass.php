@@ -12,21 +12,21 @@ if($result->num_rows ==0){
 $row = $result->fetch_assoc();
 $uid = $row["uid"];
 
-$sql = "SELECT * FROM todo WHERE done = 0 and uid = \"$uid\"";
+$sql = "SELECT * FROM course WHERE uid = \"$uid\"";
 $result = $conn->query($sql);
-function genRow($task,$ddl,$tid){
+function genRow($cweekbegin,$cweekend,$cname,$cid){
   return <<<"ROW"
           <tr>
-            <td>$task</td>
-            <td>$ddl</td>
-            <td><i class="material-icons" ><a href="/web/todo/removeTodo.php?tid=$tid">change_history</a></i></td>
+            <td>$cweekbegin-$cweekend</td>
+            <td>$cname</td>
+            <td><i class="material-icons" ><a href="/web/class/removeClass.php?cid={$cid}">delete_forever</a></i></td>
           </tr>
 ROW;
 }
 $rowContent = "";
 for($i = 0;$i<$result->num_rows;$i++){
   $row = $result->fetch_assoc();
-  $rowContent = $rowContent.genRow($row["task"],$row["ddl"],$row["tid"]);
+  $rowContent = $rowContent.genRow($row["cweek_begin"],$row["cweek_end"],$row["cname"],$row["crid"]);
 }
 ?>
 
@@ -63,19 +63,19 @@ background-size:cover
 
 <body>
 <div class="container">
-<h1><i class="large material-icons"><a href="/web/panel.php">arrow_back</a></i> TODO </h1>
+<h1><i class="large material-icons"><a href="/web/panel.php">arrow_back</a></i> Cource Management </h1>
   <div class="row">
     <div class="col s12 m6 l6">
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
-          <span class="card-title">All Task</span>
+          <span class="card-title">All Classes</span>
           
 <table>
         <thead>
           <tr>
-              <th>Name</th>
-              <th>Item Name</th>
-              <th></th>
+              <th>Week Interval</th>
+              <th>Class Name</th>
+              <th>Remove</th>
           </tr>
         </thead>
 
@@ -99,11 +99,16 @@ background-size:cover
         <div class="card-content">
           <span class="card-title"><b>Add</b></span>
           <p>
-      <form name="form1" action="addTodo.php" method="POST">
+      <form name="form1" action="addClass.php" method="POST">
       <div class="input-field">
-        <p><b>Task</b><input type="text" name="task"></p>
-        <p><b>DDL Date</b><input type="text" name = "date" class="datepicker"></p>
-        <p><b>DDL Time</b><input type="text" name = "time" class="timepicker"></p>
+        <p><b>Class Name</b><input type="text" name="cname"></p>
+        <p><b>Weekday</b><input type="text" name="cday"></p>
+        <p><b>Location</b><input type="text" name="clocation"></p>
+        <p><b>Week Begin</b><input type="text" name="cweek_begin"></p>
+        <p><b>Week End</b><input type="text" name="cweek_end"></p>
+        <p><b>Num Start</b><input type="text" name="ctime_begin"></p>
+        <p><b>Num End</b><input type="text" name="ctime_end"></p>
+
       </div>
       </form>
       </p>
