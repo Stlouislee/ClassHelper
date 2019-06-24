@@ -12,6 +12,9 @@
 
 **-BOOK**={bid,bname,bpath} *with minimal key* {bid} *and foreign key* {crid}
 
+**-TODO**={tid,task,ddl,done} *with miniaml key* {tid} *and foreign key* {uid}
+
+
 ## Explain the keys
 
 ### USER
@@ -45,6 +48,18 @@
 `sid`, the session id
 
 `stime`, the time the session start
+
+### TODO
+
+`tid`, the task id
+
+`task`, the content of the task
+
+`ddl`, the deadline of the task
+
+`done`, marked 1 if the task is done
+
+`uid`, the id of the user who own this task
 
 ### BOOK
 
